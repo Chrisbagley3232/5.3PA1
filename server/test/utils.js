@@ -1,6 +1,4 @@
-'use strict';
-
-var responseValidatorAsync = function (expectedStatusCode, validationFunction) {
+var responseValidator = function (expectedStatusCode, validationFunction) {
   return {
     json: function (statusCode, data) {
       statusCode.should.equal(expectedStatusCode);
@@ -14,5 +12,5 @@ var responseValidatorAsync = function (expectedStatusCode, validationFunction) {
 };
 
 module.exports = {
-  responseValidatorAsync
+  responseValidator
 };
